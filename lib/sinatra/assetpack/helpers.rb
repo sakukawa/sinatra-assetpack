@@ -46,7 +46,7 @@ module Sinatra
       end
 
       def asset_filter_css(str)
-        Css.preproc str, settings.assets
+        Css.preproc str, settings.assets, request.script_name
       end
 
       def asset_path_for(file, from)
